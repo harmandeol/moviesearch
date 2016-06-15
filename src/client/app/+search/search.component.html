@@ -1,0 +1,19 @@
+<div class="overlay" [style.height]="isOpen ? 100 + '%' : 0 + '%'" >
+<a href="javascript:void(0)" class="closebtn" (click)="closeOverlay()">&times;</a>
+<div class="overlay-content" (keyup.escape)="closeOverlay()">
+  <div class="row">
+    <div class="col-lg-4 col-md-8 col-sm-8 col-sm-offset-2 col-md-offset-2 col-lg-offset-4">
+          <form (submit)="search(searchValue)" role="form">
+            <div class="form-content">
+            <input [(ngModel)]="searchValue" focusable (keyup)="search(searchValue)" type="text" id="search" class="form-control input-underline input-lg" placeholder="Search Movies">
+            </div>
+          </form>
+          <ul>
+            <li *ngFor="let movie of movies | async"><a [routerLink]="['/', movie.imdbID]" (click)="closeOverlay()"><span>{{movie.Title}}</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+
+

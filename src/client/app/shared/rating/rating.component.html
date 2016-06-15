@@ -1,0 +1,7 @@
+<span tabindex="0">
+	<template ngFor let-i [ngForOf]="range">		
+		<span class="sr-only">({{ i <= rate ? '*' : ' ' }})</span>
+		<i class="glyphicon" [ngClass]="i <= rate ? 'glyphicon-star' : 'glyphicon-star-empty'"></i>
+	</template>
+</span>
+

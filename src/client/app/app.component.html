@@ -1,0 +1,6 @@
+
+<movie-toolbar (onSearch)="onSearch($event)"></movie-toolbar>
+<div class="container">
+    <movie-search [isOpen]="isSearchOpen" (onOverlayClosed)="onSearch(false)"></movie-search>
+    <router-outlet></router-outlet>
+<div>

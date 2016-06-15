@@ -1,0 +1,28 @@
+<div class="movie-details">
+<div class="row">
+  <div class="col-sm-4">
+    <figure>
+      <img [src]="movie?.Poster" alt="{{movie?.Title}}" height="350"/>
+    </figure>
+  </div>
+  <div class="col-sm-8">
+    <h1>{{movie?.Title}}</h1>
+    <dl>
+        <dt>Year</dt><dd>{{movie?.Year}}</dd>
+        <dt>Released</dt><dd>{{movie?.Released}}</dd>
+        <dt>Type</dt><dd>{{movie?.Type}}</dd>
+        <dt>Genre</dt><dd>{{movie?.Genre}}</dd>
+        <dt>Country</dt><dd>{{movie?.Country}}</dd>
+        <dt>ImdbRating:  {{movie?.imdbRating}}</dt><dd><star-rating [rate]="movie?.imdbRating"></star-rating></dd>
+    </dl>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <article>{{movie?.Plot | sliceWords:max }}  <a *ngIf="showFullPlotVisible" (click)="showFullPlot()" >show more</a></article>
+  </div>
+</div>
+</div>
+
+
+

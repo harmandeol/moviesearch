@@ -1,0 +1,63 @@
+:host {
+  display: block;
+  padding: 0 16px;
+}
+
+.input-underline {
+    background: 0 0;
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid hsla(0,0%,100%,.5);
+    color: #fff;
+    border-radius: 0;
+    text-align: center;
+}
+
+
+.overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    background-color: rgba(44, 62, 80);
+    background-color: rgba(44, 62, 80, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.overlay-content {
+    position: relative;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay-content a {
+      padding: 8px;
+      text-decoration: none;
+      color: #aaaaaa;
+      display: block;
+      transition: 0.3s;
+}
+.overlay-content a:hover, .overlay-content a:focus {
+    color: rgba(#aaaaaa, 0.9);
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .closebtn {
+        font-size: 40px !important;
+        top: 15px;
+        right: 35px;
+    }
+}
