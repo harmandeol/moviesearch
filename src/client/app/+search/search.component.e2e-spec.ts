@@ -18,7 +18,8 @@ let search = {
         () => {
           expect(element(by.css(search.searchBox)).isPresent()).toEqual(true);
           element(by.css(search.searchBox)).sendKeys('th');
-          browser.wait(expect(element(by.css(search.searchResults)).isDisplayed()).toBeTruthy, 10000);
+          browser.actions().sendKeys(protractor.Key.ENTER).perform();
+          expect(element(by.css(search.searchResults)).isDisplayed()).toBeTruthy;
         });
     });
 

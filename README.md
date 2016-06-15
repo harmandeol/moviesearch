@@ -1,18 +1,21 @@
 [![Build Status](https://travis-ci.org/harmandeol/moviesearch.svg?branch=master)](https://travis-ci.org/harmandeol/moviesearch)
 # Introduction
 
-A movie search app using angular2 seed template. I used this template so as to minimize the work in setting up using best practices.
+A movie search app using [angular2 seed template](https://github.com/mgechev/angular2-seed). I used this template to showcase best practices.
 
-All the pipes and directives I created here are not fully covered with unit tests. Although before release it to production it is expected to be finished. Travis CI is the go to tool for me for continous integration and heroku for deployment.
-
-omdbapi allows to search by title and year. I have created only one text box for search
+[Omdbapi](http://omdbapi) allows to search by title and year. I have implemented only one text box for all search types
 - You can search for "titanic" by entering the string "titanic".
-- Search for titanic and year 1997 is as easy as typing "titanic 1990".
+- Search for titanic and year 1997 is as easy as typing "titanic 1997". ( not covered by unit tests yet)
 
 Also Pipes and Directive and shared components are created whereever it made sense.
 
-Sorting on search results hasn't been implemented as it did not make sense here. But it can easily be implemented by creating a service for sorting ( AngularJS2 doens't provide inbuilt functionality)
+Sorting on search results hasn't been implemented as it did not make sense here. If required it can be implemented by creating a service for sorting ( AngularJS2 doens't provide inbuilt functionality).
+All the pipes and directives are not fully covered with unit tests. Travis CI is the go to tool for me for continous integration and heroku for deployment.
 
+Future Improvements:
+- scss use
+- unit test all units ( more scenarios).
+- deployment to heroku.
 
 `angular2-seed` provides the following features:
 
