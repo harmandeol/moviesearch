@@ -246,7 +246,7 @@ export class SeedConfig {
    * The default value is false. Override with the '--scss' flag.
    * @type {boolean}
    */
-  ENABLE_SCSS = argv['scss'] || true;
+  ENABLE_SCSS = argv['scss'] || false;
 
   /**
    * The list of NPM dependcies to be injected in the `index.html`.
