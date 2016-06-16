@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/harmandeol/moviesearch.svg?branch=master)](https://travis-ci.org/harmandeol/moviesearch)
+[![Build Status](https://travis-ci.org/harmandeol/moviesearch.svg?branch=master)](https://travis-ci.org/harmandeol/moviesearch) [Demo](https://omdbmovie.herokuapp.com)
 # Introduction
 
 A movie search app using [angular2 seed template](https://github.com/mgechev/angular2-seed). I used this template to showcase best practices.
