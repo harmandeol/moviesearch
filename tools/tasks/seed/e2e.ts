@@ -6,6 +6,9 @@ class Protractor {
   server(port: number, dir: string) {
     let app = express();
     app.use(express.static(dir));
+    app.all('*', function(req, res) {
+      res.sendfile(dir + '/index.html');
+    });
     return new Promise((resolve, reject) => {
       let server = app.listen(port, () => {
         resolve(server);
