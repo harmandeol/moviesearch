@@ -1,1 +1,1 @@
-web: npm start -- --port=$PORT --b
+web: npm run serve.prod -- --port=$PORT --b
