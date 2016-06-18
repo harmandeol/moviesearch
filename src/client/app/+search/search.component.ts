@@ -1,5 +1,5 @@
 import { FORM_DIRECTIVES } from '@angular/common';
-import { Component, ViewChild, Input, Output, EventEmitter } from '@angular/core';
+import { Component, ViewChild, Input, Output, EventEmitter, OnChanges, SimpleChange } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import { ROUTER_DIRECTIVES, Router } from '@angular/router';
@@ -17,7 +17,7 @@ import 'rxjs/add/operator/switchMap';
   directives: [ROUTER_DIRECTIVES, FORM_DIRECTIVES, FocusableDirective]
 })
 
-export class MovieSearchComponent {
+export class MovieSearchComponent implements OnChanges {
   @Input() isOpen: boolean;
   @Output() onOverlayClosed = new EventEmitter<boolean>();
   @ViewChild(FocusableDirective) focusable:FocusableDirective;
@@ -38,6 +38,11 @@ export class MovieSearchComponent {
 
   constructor(public moviesService: MoviesService, private router: Router) {}
 
+  ngOnChanges(changes: {[isOpen: string]: SimpleChange}) {
+    if(changes['isOpen'].currentValue) {
+        this.focusable.focus();
+      }
+  }
 
   search(searchValue: string): void {
     this.searchTermStream.next(searchValue);

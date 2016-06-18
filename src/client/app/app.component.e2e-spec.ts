@@ -14,9 +14,7 @@ describe('App', () => {
 
   it('should open search overlay on clicking search input box', () => {
     element(by.css('movie-app movie-toolbar input')).sendKeys('f');
-    element(by.css('movie-app movie-search')).isDisplayed().then(
-      ()=> expect(element(by.css('movie-app movie-search input')).isPresent()).toEqual(true)
-    );
+    expect(element(by.css('movie-app movie-search input')).isDisplayed()).toBeTruthy();
   });
 
 });

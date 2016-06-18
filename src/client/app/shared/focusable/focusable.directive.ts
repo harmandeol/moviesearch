@@ -7,9 +7,6 @@ export class FocusableDirective {
   constructor(public renderer: Renderer, public elementRef: ElementRef) {}
 
   focus() {
-    setTimeout( () => {
-      this.renderer.invokeElementMethod(
-        this.elementRef.nativeElement, 'focus', []);
-    }, 100);
+    this.renderer.invokeElementMethod(this.elementRef.nativeElement, 'focus', []);
   }
 }
